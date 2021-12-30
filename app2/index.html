@@ -44,7 +44,10 @@
   list();
   function list() {
     $.get("api/list.php", (list) => {
-      let classlist=JSON.parse(list)
+      console.log(list)
+      $("#classlist").html(list)
+
+/*       let classlist=JSON.parse(list)
       let card;
       classlist.forEach((c,i)=>{
         card=`<div class="card">
@@ -56,7 +59,7 @@
         $("#classlist").append(card)
 
         
-      })          
+      })  */         
     })
   }
 
