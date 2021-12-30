@@ -44,6 +44,7 @@
   list();
   function list() {
     $.get("api/list.php", (list) => {
+      console.log(list)
       let classlist=JSON.parse(list)
       let card;
       classlist.forEach((c,i)=>{
